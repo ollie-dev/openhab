@@ -5,8 +5,10 @@ This binding allows openHAB to be integrated [RWE SmartHome](https://www.rwe-sma
 ## Limitations
 
 1. This binding only works with the "old" RWE SmartHome software and **will NOT WORK anymore with the RWE 2.0 Software (released on 01.09.2016)**. Do not update your RWE Software if you still like to use this binding!
-1. This binding is based on an unofficial interface, which may be changed or even closed by RWE at any time.
-1. The binding only runs with TLSv1, which is default until Java 1.7. If you use Java 1.8, you have to add `-Djdk.tls.client.protocols=TLSv1` to the `java` command in your start.sh/start.bat file.  In openHAB 2, the `java` command is somewhere at the end of `runtime/karaf/bin/karaf`.
+2. This binding is based on an unofficial interface, which may be changed or even closed by RWE at any time.
+3. The binding only runs with TLSv1, which is default until Java 1.7. If you use Java 1.8, you have to add `-Djdk.tls.client.protocols=TLSv1` to the `java` command in your start.sh/start.bat file.  In openHAB 2, the `java` command is somewhere at the end of `runtime/karaf/bin/karaf`.
+
+**Warning**: the general configuration for TLSv1 can have side-effects on other bindings using web-requests, that rely on a newer TLS version!
 
 ## Binding Configuration
 
